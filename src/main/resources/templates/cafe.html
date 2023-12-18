@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe Menu</title>
+</head>
+<body>
+    <h1>Cafe Menu</h1>
+    <ul>
+        <!-- iterate over the list of menu items using Thymel -->
+        <li th:each="menuItem : ${menuItems}">
+            <!-- display menu item details creatively -->
+            <p th:text="${menuItem.name} + ': ' + ${menuItem.description} + ' - $' + ${menuItem.price}"></p>
+        </li>
+    </ul>
+</body>
+</html>
